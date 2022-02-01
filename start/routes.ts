@@ -18,8 +18,18 @@
 |
 */
 
-import Route from '@ioc:Adonis/Core/Route'
+import Route from "@ioc:Adonis/Core/Route";
 
-Route.get('/', async ({ view }) => {
-  return view.render('welcome')
-})
+// import TodosController from "App/Controllers/Http/TodosController";
+
+// Route.get("/todos", (ctx) => new TodosController().index(ctx));
+// Route.get('/todos', async (ctx) => {
+//   const TodosController = (await import('App/Controllers/Http/TodosController'))
+//     .default
+//   return new TodosController().index(ctx)
+// });
+// Route.get("/", "TodosController.index"); //meilleur facon d'ecrire
+
+Route.get("/", async ({ view }) => {
+  return view.render("welcome");
+});
